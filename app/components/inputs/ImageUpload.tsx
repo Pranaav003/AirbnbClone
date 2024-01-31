@@ -9,7 +9,8 @@ declare global {
   var cloudinary: any
 }
 
-const uploadPreset = "pgc9ehd5";
+// Remove the hardcoded uploadPreset
+// const uploadPreset = "pgc9ehd5";
 
 interface ImageUploadProps {
   onChange: (value: string) => void;
@@ -23,6 +24,9 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
   const handleUpload = useCallback((result: any) => {
     onChange(result.info.secure_url);
   }, [onChange]);
+
+  // Add your Cloudinary upload preset here
+  const uploadPreset = "h312vmpl";
 
   return (
     <CldUploadWidget 
