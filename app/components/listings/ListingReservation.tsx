@@ -42,9 +42,13 @@ const ListingReservation: React.FC<
           $ {price}
         </div>
         <div className="font-light text-neutral-600">
-          night
+          to adopt
         </div>
       </div>
+      <hr />
+      <div className="gap-1 p-4 font-light text-neutral-600">
+            Pick a date to reserve!
+          </div>
       <hr />
       <Calendar
         value={dateRange}
